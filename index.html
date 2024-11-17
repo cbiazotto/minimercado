@@ -3,106 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Minimercado Biazotto</title>
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <header>
-    <header>
-        <nav>
-            <ul>
-                <li><a href=index.html>Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+    <div class="menu">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" >
+        <img src="imagens/Mini%20Mercado%20(500%20x%20200%20px).png" alt="logo" width="250" height="50">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href=index.html>Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                    </ul>
+                </li>
+
             </ul>
-        </nav>
-    </header>
-    <h1>Minimercado Biazotto</h1>
+
+        </div>
+    </div>
+    </nav>
+    </div>
 </header>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <img src="imagens/banner/frutas%20e%20verduras.png" class="d-block w-100" alt="banner frutas e verduras">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="imagens/banner/delivery.png" class="d-block w-100" alt="delivery">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="imagens/banner/semana das carnes .png" class="d-block w-100" alt="semana da carne">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <!-- Seção Principal -->
 <main>
 
     <!-- Seção de inicial -->
     <section id="home">
-        <h2>Boas Compras!</h2>
+        <h1>Boas Compras!</h1>
     </section>
-    </br></br></br>
+
 
 
     <!-- Seção de Produtos -->
-    <section id="produtos">
-        <h2>Produtos</h2>
+    <section id="produtos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Produtos</h2>
+            <div class="row g-4">
+                <!-- Card 1: Frutas e Verduras -->
+                <div class="col-md-4">
+                    <div id="cards" class="card h-100">
+                        <img src="imagens/card%20frutas%20e%20legumes.jpeg" class="card-img-top" alt="Frutas e Verduras">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="frutas-e-verduras.html" class="text-decoration-none">Frutas e Verduras</a>
+                            </h5>
+                            <p class="card-text">Frutas e verduras frescas, selecionadas diariamente para você.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="frutas-e-verduras.html" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </div>
 
-        <article>
-            <h3><a href="frutas-e-verduras.html">Frutas e Verduras</a></h3>
-            <p>Frutas e verduras frescas, selecionadas diariamente para você.</p>
-        </article>
+                <!-- Card 2: Produtos Alimentícios -->
+                <div class="col-md-4">
+                    <div id="cards" class="card h-100">
+                        <img src="imagens/card%20nao%20pereciveis.jpg" class="card-img-top" alt="Produtos Alimentícios">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="produtos-alimenticios-nao-pereciveis.html" class="text-decoration-none">Produtos Alimentícios não Perecíveis</a>
+                            </h5>
+                            <p class="card-text">Pães fresquinhos, bolos, e outros itens de padaria que são preparados diariamente.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="produtos-alimenticios-nao-pereciveis.html" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </div>
 
-        <article>
-            <h3><a href="produtos-alimenticios-nao-pereciveis.html">Produtos Alimentícios não Perecíveis</a></h3>
-            <p>Pães fresquinhos, bolos, e outros itens de padaria que são preparados diariamente.</p>
-        </article>
-
-        <article>
-            <h3><a href="produtos-de-higiene-e-limpeza.html">Produtos de Higiene e Limpeza</a></h3>
-            <p>Uma variedade de produtos de limpeza e higiene para deixar sua casa sempre limpa e organizada.</p>
-        </article>
+                <!-- Card 3: Higiene e Limpeza -->
+                <div id="cards" class="col-md-4">
+                    <div class="card h-100">
+                        <img src="imagens/card%20produtos%20de%20limpeza%20e%20higiene.png" class="card-img-top" alt="Higiene e Limpeza">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="produtos-de-higiene-e-limpeza.html" class="text-decoration-none">Produtos de Higiene e Limpeza</a>
+                            </h5>
+                            <p class="card-text">Uma variedade de produtos de limpeza e higiene para deixar sua casa sempre limpa e organizada.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="produtos-de-higiene-e-limpeza.html" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    </br></br></br></br></br>
+    </br>
 
     <!-- Seção de Serviços -->
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <article>
-            <h3>Retirada no Local</h3>
-            <p>
-                Para sua conveniência, oferecemos a opção de retirada no local.
-                Faça seu pedido online ou pelo telefone e passe em nossa loja para
-                buscar no horário que for mais conveniente para você. Assim,
-                você economiza no frete e garante praticidade e rapidez no atendimento.
-                Nossa equipe estará pronta para entregar seus produtos diretamente em mãos,
-                sem complicações!
-            </p>
-            <p>Serviço disponivel para pedidos acima de R$ 100,00</p>
-            <p>Gratuito</p>
-        </article>
-        <article>
-            <h3>Tele-entrega</h3>
-            <p>
-                Desfrute da comodidade do nosso serviço de tele-entrega!
-                Faça seus pedidos pelo telefone, WhatsApp ou através do nosso site,
-                e entregaremos suas compras diretamente na sua porta. Garantimos rapidez,
-                segurança e a qualidade que você já conhece. Evite deslocamentos e
-                economize tempo aproveitando nossa entrega eficiente e confiável.
-            </p>
-            <p>Entregas apenas em compras acima de R$ 100,00</p>
-            <p>R$ 15,00</p>
+    <section id="servicos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Serviços</h2>
+            <div class="row g-4">
+                <!-- Card 1: Retirada no Local -->
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Retirada no Local</h5>
+                            <p class="card-text">
+                                Para sua conveniência, oferecemos a opção de retirada no local.
+                                Faça seu pedido online ou pelo telefone e passe em nossa loja para
+                                buscar no horário que for mais conveniente para você.
+                            </p>
+                            <p><strong>Serviço disponível para pedidos acima de:</strong> R$ 100,00</p>
+                            <p><strong>Custo:</strong> Gratuito</p>
 
-        </article>
+                            <!-- Agendamento -->
+                            <form action="/agendar-retirada" method="post">
+                                <div class="mb-3">
+                                    <label for="dataRetirada" class="form-label">Escolha o dia e horário:</label>
+                                    <div class="input-group">
+                                        <input type="text" id="dataRetirada" name="dataRetirada" class="form-control datetimepicker" placeholder="Selecione uma data e hora" required>
+                                        <span class="input-group-text">
+                                        <i class="bi bi-calendar-event"></i>
+                                    </span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Agendar Retirada</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tele-entrega -->
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Tele-entrega</h5>
+                            <p class="card-text">
+                                Desfrute da comodidade do nosso serviço de tele-entrega!
+                                Faça seus pedidos pelo telefone, WhatsApp ou através do nosso site,
+                                e entregaremos suas compras diretamente na sua porta.
+                            </p>
+                            <p><strong>Entregas apenas em compras acima de:</strong> R$ 100,00</p>
+                            <p><strong>Custo:</strong> R$ 15,00</p>
+
+                            <!-- Agendamento -->
+                            <form action="/agendar-entrega" method="post">
+                                <div class="mb-3">
+                                    <label for="dataEntrega" class="form-label">Escolha o dia e horário:</label>
+                                    <div class="input-group">
+                                        <input type="text" id="dataEntrega" name="dataEntrega" class="form-control datetimepicker" placeholder="Selecione uma data e hora" required>
+                                        <span class="input-group-text">
+                                        <i class="bi bi-calendar-event"></i>
+                                    </span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Agendar Entrega</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
-    </br></br></br></br></br>
-
+    </br>
 
 </main>
 
 <!-- Rodapé do site -->
-<footer>
-    <p>Rua: XXXXXXXXXXX, Nº 100</p>
-    <p>Cidade: Itapetininga - SP</p>
-    <p>TEL: 15 - 0000-0000</p>
-    <p>2024 Cristian Biazotto de Oliveira. Todos os direitos reservados.</p>
-    <ul>
-        <li><a href="https://twitter.com/minimercadobiazotto" target="_blank" >Twitter</a></li>
-        <li><a href="https://facebook.com/minimercadobiazotto" target="_blank" >Facebook</a></li>
-        <li><a href="https://linkedin.com/minimercadobiazotto" target="_blank" >LinkedIn</a></li>
+<footer class="footer">
+    <div class="footer-content">
+        <p><strong>Endereço:</strong> Rua: XXXXXXXXXXX, Nº 100</p>
+        <p><strong>Cidade:</strong> Itapetininga - SP</p>
+        <p><strong>Telefone:</strong> TEL: 15 - 0000-0000</p>
+        <p>© 2024 Cristian Biazotto de Oliveira. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-social">
+        <li><a href="https://twitter.com/minimercadobiazotto" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://facebook.com/minimercadobiazotto" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://linkedin.com/minimercadobiazotto" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
     </ul>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    // Inicializa o Flatpickr nos campos de data e hora
+    document.addEventListener('DOMContentLoaded', function () {
+        flatpickr(".datetimepicker", {
+            enableTime: true,           // Habilita o horário
+            dateFormat: "Y-m-d H:i",    // Formato: ano-mês-dia hora:minuto
+            minDate: "today",           // Desativa datas passadas
+            time_24hr: true,            // Usa o formato de 24h
+            locale: "pt"                // Define o idioma para português
+        });
+    });
+</script>
+
 
 </body>
 </html>

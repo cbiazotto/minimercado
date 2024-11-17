@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html en="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Minimercado Biazotto</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<header>
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" >
+                <img src="imagens/Mini%20Mercado%20(500%20x%20200%20px).png" alt="logo" width="250" height="50">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href=index.html>Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sobre
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <img src="imagens/banner/frutas%20e%20verduras.png" class="d-block w-100" alt="banner frutas e verduras">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="imagens/banner/delivery.png" class="d-block w-100" alt="delivery">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="imagens/banner/semana das carnes .png" class="d-block w-100" alt="semana da carne">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Seção Principal -->
+<main>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Cadastro do Cliente</h2>
+            <form action="/cadastrar-cliente" method="post" class="needs-validation" novalidate>
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
+                    <div class="invalid-feedback">Por favor, insira seu nome completo.</div>
+                </div>
+
+                <!-- Endereço -->
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço completo" required>
+                    <div class="invalid-feedback">Por favor, insira seu endereço.</div>
+                </div>
+
+                <!-- CPF -->
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite seu CPF" pattern="\d{11}" required>
+                    <div class="invalid-feedback">Por favor, insira um CPF válido (11 dígitos, sem pontuação).</div>
+                </div>
+
+                <!-- Sexo -->
+                <div class="mb-3">
+                    <label class="form-label">Sexo:</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="masculino" name="sexo" value="Masculino" required>
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="feminino" name="sexo" value="Feminino" required>
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="outro" name="sexo" value="Outro" required>
+                            <label class="form-check-label" for="outro">Outro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Telefone -->
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="Digite seu telefone com DDD" pattern="\d{10,11}" required>
+                    <div class="invalid-feedback">Por favor, insira um telefone válido.</div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                    <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+                </div>
+
+                <!-- Preferências -->
+                <div class="mb-3">
+                    <label class="form-label">Preferências de contato:</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pref-email" name="preferencias[]" value="E-mail">
+                            <label class="form-check-label" for="pref-email">E-mail</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pref-telefone" name="preferencias[]" value="Telefone">
+                            <label class="form-check-label" for="pref-telefone">Telefone</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pref-sms" name="preferencias[]" value="SMS">
+                            <label class="form-check-label" for="pref-sms">SMS</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Número de Dependentes -->
+                <div class="mb-3">
+                    <label for="dependentes" class="form-label">Número de Dependentes:</label>
+                    <input type="number" id="dependentes" name="dependentes" class="form-control" min="0" max="10" placeholder="Informe o número de dependentes" required>
+                    <div class="invalid-feedback">Por favor, insira um número válido.</div>
+                </div>
+
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- Rodapé do site -->
+<footer class="footer">
+    <div class="footer-content">
+        <p><strong>Endereço:</strong> Rua: XXXXXXXXXXX, Nº 100</p>
+        <p><strong>Cidade:</strong> Itapetininga - SP</p>
+        <p><strong>Telefone:</strong> TEL: 15 - 0000-0000</p>
+        <p>© 2024 Cristian Biazotto de Oliveira. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-social">
+        <li><a href="https://twitter.com/minimercadobiazotto" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://facebook.com/minimercadobiazotto" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://linkedin.com/minimercadobiazotto" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
